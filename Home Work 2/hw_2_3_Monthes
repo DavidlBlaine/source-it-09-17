@@ -1,0 +1,26 @@
+package hw2;
+
+import java.util.Scanner;
+
+public class hw_2_3_Monthes {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int month;
+        Scanner in = new Scanner(System.in);
+        String[] monthes = {"January", "Fabraury", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        System.out.print("Choose a correct number from 1 to 12: ");
+        if (in.hasNextInt()) {
+            month = in.nextInt();
+
+            if (month > 0 & month <= 12) {
+                 System.out.println("You chose " + monthes[month - 1]);
+               } else if (month < 0 | month > 12) {
+                System.out.println("Wrong! You chose incorrect number. It must be from 1 to 12 ");
+            }
+        } else {
+            System.out.println("Wrong! You need to choose only numbers and only from 1 to 12");
+        }
+
+    }
+}
